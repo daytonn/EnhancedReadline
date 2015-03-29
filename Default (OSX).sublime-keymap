@@ -1,9 +1,9 @@
 [
 // Cursor Movement
-  // ⌃F Forward by words
+  // ⌥F Forward by words
   { "keys": ["alt+f"], "command": "move", "args": { "by": "wordends", "forward": true } },
 
-  // ⌃B Backward by words
+  // ⌥B Backward by words
   { "keys": ["alt+b"], "command": "move", "args": { "by": "words", "forward": false } },
 
   // ⌃A Beginning of line (soft)
@@ -15,10 +15,10 @@
   // ⌥N End of file
   { "keys": ["alt+n"], "command": "move_to", "args": { "to": "eof" } },
 
+// Selection
   // ⇧⌥F Forward by words
   { "keys": ["shift+alt+f"], "command": "move", "args": { "by": "wordends", "forward": true, "extend": true } },
 
-// Selection
   // ⇧⌥B Select backward by words
   { "keys": ["shift+alt+b"], "command": "move", "args": { "by": "words", "forward": false, "extend": true } },
 
@@ -38,7 +38,7 @@
   // ⌃/ Toggle comment
   { "keys": ["ctrl+forward_slash"], "command": "toggle_comment", "args": { "block": false } },
 
-  // Join lines
+  // ⌃J Join lines
   { "keys": ["ctrl+j"], "command": "join_lines" },
 
 // Multiple Cursors
