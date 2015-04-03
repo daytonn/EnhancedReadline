@@ -33,6 +33,7 @@ Readline Enhancements
  * Move to begining of file (⌥P)
  * Move to end of file (⌥N)
  * Select to the end of the file (⇧⌥N)
+ * Select to the begining of the file (⇧⌥P)
  * Toggle comment line (⌃/)
  * Join lines (⌃J)
  * New cursor on previous line (⌃⌥P)
