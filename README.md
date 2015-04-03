@@ -6,7 +6,7 @@ EnhancedReadline is a Sublime Text 3 package that fixes some default readline ke
 Installation
 ------------
 
-### With PackageControl (pending)
+### With PackageControl
 
 Install Package: EnhancedReadline
 
