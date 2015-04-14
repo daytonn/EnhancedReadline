@@ -1,7 +1,7 @@
 EnhancedReadline
 ================
 
-EnhancedReadline is a Sublime Text 3 package that fixes some default readline keybindings that are not bound by Sublime. It also adds some readline-style keybindings for Sublime line editing features.
+EnhancedReadline is a Sublime Text 3 package that fixes some default readline keybindings that are not bound by Sublime. It also adds some readline-style keybindings for Sublime line editing features. [The full keymap can be viewed here](https://github.com/daytonn/EnhancedReadline/blob/master/KEYMAP.md)
 
 Installation
 ------------
@@ -40,3 +40,5 @@ Readline Enhancements
  * New cursor on next line (⌃⌥N)
  * Swap lines up (⌃⌘P)
  * Swap lines down (⌃⌘N)
+
+[The full keymap can be viewed here](https://github.com/daytonn/EnhancedReadline/blob/master/KEYMAP.md)
