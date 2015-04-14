@@ -8,6 +8,7 @@ Cursor Movement
 
   ```js
   {
+    "keys": ["alt+f"],
     "command": "move",
     "args": { "by": "wordends", "forward": true }
   }
@@ -17,6 +18,7 @@ Cursor Movement
 
   ```js
   {
+    "keys": ["alt+b"],
     "command": "move",
     "args": { "by": "words", "forward": false }
   }
@@ -26,6 +28,7 @@ Cursor Movement
 
   ```js
   {
+    "keys": ["ctrl+a"],
     "command": "move_to",
     "args": { "to": "bol" }
   }
@@ -35,6 +38,7 @@ Cursor Movement
 
   ```js
   {
+    "keys": ["alt+p"],
     "command": "move_to",
     "args": { "to": "bof" }
   }
@@ -44,6 +48,7 @@ Cursor Movement
 
   ```js
   {
+    "keys": ["alt+n"],
     "command": "move_to",
     "args": { "to": "eof" }
   }
@@ -53,6 +58,7 @@ Cursor Movement
 
   ```js
   {
+    "keys": ["shift+alt+f"],
     "command": "move",
     "args": { "by": "wordends", "forward": true, "extend": true }
   }
@@ -65,6 +71,7 @@ Selection
 
   ```js
   {
+    "keys": ["shift+alt+b"],
     "command": "move",
     "args": { "by": "words", "forward": false, "extend": true }
   }
@@ -74,6 +81,7 @@ Selection
 
   ```js
   {
+    "keys": ["shift+ctrl+p"],
     "command": "move",
     "args": { "by": "lines", "forward": false, "extend": true }
   }
@@ -83,6 +91,7 @@ Selection
 
   ```js
   {
+    "keys": ["shift+alt+n"],
     "command": "move_to",
     "args": { "to": "eof", "extend": true }
   }
@@ -92,6 +101,7 @@ Selection
 
   ```js
   {
+    "keys": ["shift+alt+p"],
     "command": "move_to",
     "args": { "to": "bof", "extend": true }
   }
@@ -104,6 +114,7 @@ Line editing
 
   ```js
   {
+    "keys": ["alt+d"],
     "command": "delete_word",
     "args": { "forward": true, "sub_words": true }
   }
@@ -113,6 +124,7 @@ Line editing
 
   ```js
   {
+    "keys": ["ctrl+forward_slash"],
     "command": "toggle_comment",
     "args": { "block": false }
   }
@@ -122,6 +134,7 @@ Line editing
 
   ```js
   {
+    "keys": ["ctrl+j"],
     "command": "join_lines"
   }
   ```
@@ -133,6 +146,7 @@ Multiple Cursors
 
   ```js
   {
+    "keys": ["ctrl+alt+n"],
     "command": "select_lines",
     "args": { "by": "characters", "forward": true }
   }
@@ -142,6 +156,7 @@ Multiple Cursors
 
   ```js
   {
+    "keys": ["ctrl+alt+p"],
     "command": "select_lines",
     "args": { "by": "characters", "forward": false }
   }
@@ -154,6 +169,7 @@ Line movement
 
   ```js
   {
+    "keys": ["ctrl+super+p"],
     "command": "swap_line_up"
   }
   ```
@@ -162,16 +178,19 @@ Line movement
 
   ```js
   {
+    "keys": ["ctrl+super+n"],
     "command": "swap_line_down"
   }
   ```
 
 Extra Readline Enhacements
 --------------------------
+
   * Indent with ctrl instead of super `ctrl+]`
 
   ```js
   {
+    "keys": ["ctrl+]"],
     "command": "indent"
   }
   ```
@@ -180,6 +199,7 @@ Extra Readline Enhacements
 
   ```js
   {
+    "keys": ["ctrl+["],
     "command": "unindent"
   }
   ```
@@ -188,6 +208,7 @@ Extra Readline Enhacements
 
   ```js
   {
+    "keys": ["ctrl+forward_slash"],
     "command": "toggle_comment",
     "args": { "block": false }
   }
@@ -197,6 +218,7 @@ Extra Readline Enhacements
 
   ```js
   {
+    "keys": ["ctrl+shift+forward_slash"],
     "command": "toggle_fold_comments"
   }
   ```

@@ -2,6 +2,8 @@
 class KeymapParser
   def initialize(file)
     @keymap_lines = File.readlines file
+    @keymap_lines.shift
+    @keymap_lines.pop
   end
 
   def save_to(file)
@@ -13,13 +15,9 @@ class KeymapParser
 
   def parsed_lines
     @keymap_lines.each_with_object([]) do |line, memo|
-      next if line.match(/^\[|\]/)
-
       uncommented_line = uncomment_line(line)
 
-      if is_heading?(line)
-        memo << to_markdown_header(uncommented_line)
-      elsif is_code_begining?(line)
+      if is_code_begining?(line)
         memo << ""
         memo << begin_code_block
         memo << uncommented_line
@@ -50,10 +48,6 @@ class KeymapParser
 
   def uncomment_line(line)
     line.gsub(/\/\/\s?/, "")
-  end
-
-  def to_markdown_header(string)
-    string
   end
 
   def begin_code_block
