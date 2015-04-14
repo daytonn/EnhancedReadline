@@ -53,4 +53,17 @@
   { "keys": ["ctrl+super+p"], "command": "swap_line_up" },
   // ⌃⌘N Swap line Down
   { "keys": ["ctrl+super+n"], "command": "swap_line_down" },
+
+// Extra Readline Enhacements
+  // ⌃] Indent with ctrl instead of super
+  { "keys": ["ctrl+]"], "command": "indent" },
+
+  // ⌃[ Unindent with ctrl instead of super
+  { "keys": ["ctrl+["], "command": "unindent" },
+
+  // ⌃/ Toggle comments with ctrl instead of super
+  { "keys": ["ctrl+forward_slash"], "command": "toggle_comment", "args": { "block": false } },
+
+  // ⇧⌃C Toggle fold comments with ctrl instead of super
+  { "keys": ["ctrl+shift+forward_slash"], "command": "toggle_fold_comments" }
 ]
