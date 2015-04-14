@@ -1,69 +1,163 @@
 [
+// EnhancedReadline Keymap
+// =======================
+
 // Cursor Movement
-  // ⌥F Forward by words
-  { "keys": ["alt+f"], "command": "move", "args": { "by": "wordends", "forward": true } },
+// ---------------
 
-  // ⌥B Backward by words
-  { "keys": ["alt+b"], "command": "move", "args": { "by": "words", "forward": false } },
+  // * Forward by words `ctrl+f`
+  {
+    "keys": ["alt+f"],
+    "command": "move",
+    "args": { "by": "wordends", "forward": true }
+  },
 
-  // ⌃A Beginning of line (soft)
-  { "keys": ["ctrl+a"], "command": "move_to", "args": { "to": "bol" } },
+  // * Backward by words `ctrl+b`
+  {
+    "keys": ["alt+b"],
+    "command": "move",
+    "args": { "by": "words", "forward": false }
+  },
 
-  // ⌥P Beginning of file
-  { "keys": ["alt+p"], "command": "move_to", "args": { "to": "bof" } },
+  // * Beginning of line (soft) `ctrl+a`
+  {
+    "keys": ["ctrl+a"],
+    "command": "move_to",
+    "args": { "to": "bol" }
+  },
 
-  // ⌥N End of file
-  { "keys": ["alt+n"], "command": "move_to", "args": { "to": "eof" } },
+  // * Beginning of file `alt+p`
+  {
+    "keys": ["alt+p"],
+    "command": "move_to",
+    "args": { "to": "bof" }
+  },
+
+  // * End of file `alt+n`
+  {
+    "keys": ["alt+n"],
+    "command": "move_to",
+    "args": { "to": "eof" }
+  },
+
+  // * Forward by words `shift+alt+f`
+  {
+    "keys": ["shift+alt+f"],
+    "command": "move",
+    "args": { "by": "wordends", "forward": true, "extend": true }
+  },
 
 // Selection
-  // ⇧⌥F Forward by words
-  { "keys": ["shift+alt+f"], "command": "move", "args": { "by": "wordends", "forward": true, "extend": true } },
+// ---------
 
-  // ⇧⌥B Select backward by words
-  { "keys": ["shift+alt+b"], "command": "move", "args": { "by": "words", "forward": false, "extend": true } },
+  // * Select backward by words `shift+alt+b`
+  {
+    "keys": ["shift+alt+b"],
+    "command": "move",
+    "args": { "by": "words", "forward": false, "extend": true }
+  },
 
-  // ⇧⌃P Select to previous line
-  { "keys": ["shift+ctrl+p"], "command": "move", "args": { "by": "lines", "forward": false, "extend": true } },
+  // * Select to previous line `shift+ctrl+p`
+  {
+    "keys": ["shift+ctrl+p"],
+    "command": "move",
+    "args": { "by": "lines", "forward": false, "extend": true }
+  },
 
-  // ⇧⌥N Select to end of File
-  { "keys": ["shift+alt+n"], "command": "move_to", "args": { "to": "eof", "extend": true } },
+  // * Select to end of File `shift+alt+n`
+  {
+    "keys": ["shift+alt+n"],
+    "command": "move_to",
+    "args": { "to": "eof", "extend": true }
+  },
 
-  // ⇧⌥P Select to begining of File
-  { "keys": ["shift+alt+p"], "command": "move_to", "args": { "to": "bof", "extend": true } },
+  // * Select to begining of File `shift+alt+p`
+  {
+    "keys": ["shift+alt+p"],
+    "command": "move_to",
+    "args": { "to": "bof", "extend": true }
+  },
 
 // Line editing
-  // ⌥D Delete word Forward
-  { "keys": ["alt+d"], "command": "delete_word", "args": { "forward": true, "sub_words": true } },
+// ------------
 
-  // ⌃/ Toggle comment
-  { "keys": ["ctrl+forward_slash"], "command": "toggle_comment", "args": { "block": false } },
+  // * Delete word Forward `alt+d`
+  {
+    "keys": ["alt+d"],
+    "command": "delete_word",
+    "args": { "forward": true, "sub_words": true }
+  },
 
-  // ⌃J Join lines
-  { "keys": ["ctrl+j"], "command": "join_lines" },
+  // * Toggle comment `ctrl+/`
+  {
+    "keys": ["ctrl+forward_slash"],
+    "command": "toggle_comment",
+    "args": { "block": false }
+  },
+
+  // * Join lines `ctrl+j`
+  {
+    "keys": ["ctrl+j"],
+    "command": "join_lines"
+  },
 
 // Multiple Cursors
-  // ⌃⌥P New Cursor Up
-  { "keys": ["ctrl+alt+n"], "command": "select_lines", "args": { "by": "characters", "forward": true } },
+// ----------------
 
-  // ⌃⌥N New Cursor Down
-  { "keys": ["ctrl+alt+p"], "command": "select_lines", "args": { "by": "characters", "forward": false } },
+  // * New Cursor Up `ctrl+alt+p`
+  {
+    "keys": ["ctrl+alt+n"],
+    "command": "select_lines",
+    "args": { "by": "characters", "forward": true }
+  },
+
+  // * New Cursor Down `ctrl+alt+n`
+  {
+    "keys": ["ctrl+alt+p"],
+    "command": "select_lines",
+    "args": { "by": "characters", "forward": false }
+  },
 
 // Line movement
-  // ⌃⌘P Swap line Up
-  { "keys": ["ctrl+super+p"], "command": "swap_line_up" },
-  // ⌃⌘N Swap line Down
-  { "keys": ["ctrl+super+n"], "command": "swap_line_down" },
+// -------------
+
+  // * Swap line Up `ctrl+cmd+p`
+  {
+    "keys": ["ctrl+super+p"],
+    "command": "swap_line_up"
+  },
+
+  // * Swap line Down `ctrl+cmd+n`
+  {
+    "keys": ["ctrl+super+n"],
+    "command": "swap_line_down"
+  },
 
 // Extra Readline Enhacements
-  // ⌃] Indent with ctrl instead of super
-  { "keys": ["ctrl+]"], "command": "indent" },
+// --------------------------
 
-  // ⌃[ Unindent with ctrl instead of super
-  { "keys": ["ctrl+["], "command": "unindent" },
+  // * Indent with ctrl instead of super `ctrl+]`
+  {
+    "keys": ["ctrl+]"],
+    "command": "indent"
+  },
 
-  // ⌃/ Toggle comments with ctrl instead of super
-  { "keys": ["ctrl+forward_slash"], "command": "toggle_comment", "args": { "block": false } },
+  // * Unindent with ctrl instead of super `ctrl+[`
+  {
+    "keys": ["ctrl+["],
+    "command": "unindent"
+  },
 
-  // ⇧⌃C Toggle fold comments with ctrl instead of super
-  { "keys": ["ctrl+shift+forward_slash"], "command": "toggle_fold_comments" }
+  // * Toggle comments with ctrl instead of super `ctrl+/`
+  {
+    "keys": ["ctrl+forward_slash"],
+    "command": "toggle_comment",
+    "args": { "block": false }
+  },
+
+  // * Toggle fold comments with ctrl instead of super `shift+ctrl+c`
+  {
+    "keys": ["ctrl+shift+forward_slash"],
+    "command": "toggle_fold_comments"
+  }
 ]
